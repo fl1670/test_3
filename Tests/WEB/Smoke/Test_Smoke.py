@@ -2,9 +2,8 @@ import allure
 from Tests.TestBase import TestBase
 
 
-@allure.testcase('https://yandex.ru/')
 @allure.feature('Web')
-@allure.story('Проверка авторизации пользователя')
+@allure.story('Smoke tests')
 class TestSmoke(TestBase):
 
     @allure.title('Тест 1')
@@ -42,5 +41,3 @@ class TestSmoke(TestBase):
         images_search_page.click_button_prev()
         image_href_new = images_search_page.get_image_href()
         assert image_href_new == image_href_1
-
-
