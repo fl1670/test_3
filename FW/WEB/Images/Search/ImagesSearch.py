@@ -1,3 +1,5 @@
+import time
+
 import allure
 from selenium.webdriver.common.by import By
 
@@ -17,16 +19,19 @@ class ImagesSearch(AnyPage):
         by = By.XPATH
         locator = f'(//div[contains(@class, "serp-item__preview")])[{index}]'
         self.click((by, locator))
+        time.sleep(0.5)
         return self
 
     @allure.step('click button next')
     def click_button_next(self):
         self.click(Locator.button_next)
+        time.sleep(0.5)
         return self
 
     @allure.step('click button prev')
     def click_button_prev(self):
         self.click(Locator.button_prev)
+        time.sleep(0.5)
         return self
 
     @allure.step('get image href')

@@ -1,8 +1,4 @@
-import time
-
 import allure
-import pytest
-
 from Tests.TestBase import TestBase
 
 
