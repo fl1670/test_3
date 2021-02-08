@@ -1,5 +1,3 @@
-import time
-
 import allure
 from selenium.webdriver.common.by import By
 
@@ -12,6 +10,7 @@ class Locator:
 
 class Images(AnyPage):
 
+    @allure.step('click images list item ({index})')
     def click_images_list_item(self, index=1):
         by = By.XPATH
         locator = f'(//*[@class="PopularRequestList"]//*[@data-grid-text])[{index}]'

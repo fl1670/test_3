@@ -1,5 +1,3 @@
-import time
-
 import allure
 from selenium.webdriver.common.by import By
 
@@ -13,6 +11,7 @@ class Locator:
 
 class Search(AnyPage):
 
+    @allure.step('click element by index ({index})')
     def click_element_by_index(self, index):
         locator = f'({Locator.search_result[1]}//h2/a[@href])[{index}]'
         self.click((Locator.search_result[0], locator))

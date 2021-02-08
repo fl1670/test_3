@@ -20,7 +20,7 @@ class BaseFW(object):
             self.manager.driver_instance.get_driver_instance()
         return self.manager.driver_instance.driver
 
-    @allure.step('Открыть главную страницу')
+    @allure.step('open main page')
     def open_main_page(self, main_page):
         title = self.get_driver().title
         if main_page not in title:
@@ -60,7 +60,7 @@ class BaseFW(object):
         actions.move_to_element(element)
         actions.perform()
 
-    @allure.step('Очистка текстового поля')
+    @allure.step('clear')
     def clear(self, locator):
         try:
             self.find_element(locator).clear()
@@ -72,7 +72,7 @@ class BaseFW(object):
     def get_current_url(self):
         return self.get_driver().current_url
 
-    @allure.step('Нажатие правой кнопкой мыши')
+    @allure.step('right click')
     def right_click(self, locator):
         try:
             self.scroll_to_element(locator)
