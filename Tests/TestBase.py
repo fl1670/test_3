@@ -2,6 +2,9 @@ from FW.Application_Manager import ApplicationManager
 
 
 class TestBase:
+
+    # new  branch
+
     APP = ApplicationManager()
 
     def setup_class(self):
